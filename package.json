@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config webpack.config.js"
+    "dev": "webpack-dev-server --mode development --config webpack.config.js",
+    "prod": "webpack --mode production --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

@@ -25,6 +25,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /.(c|sc|sa)ss$/,
+        use: ["style-loader", mcep.loader, "css-loader", "sass-loader"]
       }
     ]
   },

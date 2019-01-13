@@ -1,4 +1,4 @@
-// require('');
+require("./stylesheets/main.scss");
 console.log("aye");
 class Animal {
   sound(sound) {
