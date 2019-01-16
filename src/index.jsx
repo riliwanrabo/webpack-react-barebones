@@ -1,4 +1,5 @@
 require("./stylesheets/main.scss");
+import "babel-polyfill";
 console.log("aye");
 class Animal {
   sound(sound) {
@@ -16,3 +17,5 @@ async function call_backend() {
   }
   return body;
 }
+
+call_backend();
