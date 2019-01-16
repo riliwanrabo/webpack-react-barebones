@@ -1,6 +1,7 @@
 const path = require("path");
 const hwp = require("html-webpack-plugin");
 const mcep = require("mini-css-extract-plugin");
+const server_url = 'http://localhost:3000';
 
 const hwp_plugin = new hwp({
   template: "./src/index.html",
@@ -33,5 +34,10 @@ module.exports = {
     ]
   },
 
-  plugins: [hwp_plugin, mcep_plugin]
+  plugins: [hwp_plugin, mcep_plugin],
+  devServer: {
+    proxy: {
+      "/api": `${server_url}`
+    }
+  }
 };
